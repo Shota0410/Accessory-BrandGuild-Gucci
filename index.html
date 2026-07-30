@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUCCI ブランド紹介ガイド</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D08A;
+    --gold-dark: #A07830;
+    --black: #1a1a1a;
+    --white: #FFFFFF;
+    --beige: #F5F0E8;
+    --beige-dark: #E8DFD0;
+    --gray: #6B6B6B;
+    --gray-light: #F0EDE8;
+    --text: #2C2C2C;
+    --red: #C0392B;
+    --red-light: #E74C3C;
+    --brown: #8B5E3C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Sans', system-ui, sans-serif;
+    background: var(--beige);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: var(--black);
+    padding: 32px 20px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+    margin-top: 20px;
+  }
+  .header-brand {
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .header-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .header-sub {
+    font-size: 15px;
+    color: #aaa;
+    letter-spacing: 1px;
+  }
+
+  /* ===== TAB NAV ===== */
+  .tab-nav {
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 0 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+  }
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; right: 50%;
+    height: 3px;
+    background: var(--gold);
+    transition: left 0.25s, right 0.25s;
+  }
+  .tab-btn.active { color: var(--gold); }
+  .tab-btn.active::after { left: 0; right: 0; }
+  .tab-btn:hover { color: var(--gold-light); }
+
+  /* ===== MAIN ===== */
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 60px; }
+
+  .tab-content { display: none; animation: fadeIn 0.35s ease; }
+  .tab-content.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== SECTION TITLE ===== */
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .section-desc {
+    font-size: 17px;
+    color: var(--gray);
+    margin-bottom: 24px;
+  }
+
+  /* ===== STATS CARDS ===== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .stat-card {
+    background: var(--black);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px 14px;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1.2;
+  }
+  .stat-label {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ===== TARGET CARDS ===== */
+  .target-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .target-card {
+    background: var(--white);
+    border-radius: 12px;
+    border-top: 3px solid var(--gold);
+    padding: 22px 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .target-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  }
+  .target-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .target-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .target-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  .target-detail {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .appeal-box {
+    background: var(--beige);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .appeal-box strong {
+    display: block;
+    font-size: 12px;
+    color: var(--gold-dark);
+    margin-bottom: 3px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    background: var(--black);
+    color: var(--gold-light);
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* ===== WARNING BOX ===== */
+  .warning-box {
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    background: #fffdf5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    color: var(--text);
+  }
+  .warning-box .w-icon { font-size: 24px; flex-shrink: 0; }
+
+  .danger-box {
+    border: 2px solid var(--red-light);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    background: #fff5f5;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    color: var(--text);
+  }
+  .danger-box .w-icon { font-size: 24px; flex-shrink: 0; }
+
+  /* ===== PRICE TABLE ===== */
+  .price-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    background: var(--white);
+  }
+  thead tr {
+    background: var(--black);
+  }
+  thead th {
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--beige-dark);
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: #faf7f0; }
+  tbody td {
+    padding: 14px 16px;
+    font-size: 15px;
+    vertical-align: top;
+  }
+  tbody td:first-child {
+    font-weight: 700;
+    color: var(--black);
+    white-space: nowrap;
+  }
+  tbody td:nth-child(2) {
+    font-size: 13px;
+    color: var(--gray);
+  }
+  .price-low  { color: var(--brown); font-weight: 600; }
+  .price-mid  { color: var(--gold-dark); font-weight: 600; }
+  .price-high { color: var(--gold); font-weight: 700; }
+
+  /* ===== PRICE BAR CARDS ===== */
+  .price-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .price-bar-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 16px 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .pbc-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 10px;
+  }
+  .price-bar {
+    display: flex;
+    height: 14px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .pb-low  { background: var(--brown); }
+  .pb-mid  { background: var(--gold-dark); }
+  .pb-high { background: var(--gold); }
+  .pbc-range {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  /* ===== LEGEND ===== */
+  .legend-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .legend-item { display: flex; align-items: center; gap: 10px; }
+  .legend-dot {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .legend-dot.low  { background: var(--brown); }
+  .legend-dot.mid  { background: var(--gold-dark); }
+  .legend-dot.high { background: var(--gold); }
+  .legend-text { font-size: 15px; color: var(--text); }
+
+  /* ===== HIGH VALUE CARDS ===== */
+  .hv-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  .hv-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+  }
+  .hv-card-desc {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 18px;
+  }
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .badge-gold {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .badge-black {
+    background: var(--black);
+    color: var(--gold-light);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .hv-point {
+    background: var(--beige);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-top: 14px;
+  }
+
+  /* ===== CHECKLIST ===== */
+  .check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--beige);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .check-icon {
+    width: 24px; height: 24px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .check-text strong {
+    display: block;
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 2px;
+  }
+  .check-text span {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ===== TIPS GRID ===== */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .tip-card {
+    background: var(--black);
+    border-radius: 10px;
+    padding: 18px 16px;
+    color: var(--white);
+  }
+  .tip-emoji { font-size: 26px; margin-bottom: 8px; display: block; }
+  .tip-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .tip-body { font-size: 14px; color: #ccc; line-height: 1.6; }
+
+  /* ===== AUTHENTICITY ===== */
+  .auth-section {
+    margin-bottom: 24px;
+  }
+  .auth-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+    background: var(--beige-dark);
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+  .auth-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .auth-col {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .auth-col-header {
+    padding: 11px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .auth-col.genuine .auth-col-header {
+    background: var(--gold);
+    color: var(--black);
+  }
+  .auth-col.fake .auth-col-header {
+    background: var(--red);
+    color: var(--white);
+  }
+  .auth-col-body {
+    background: var(--white);
+    padding: 14px 16px;
+  }
+  .auth-col.genuine .auth-col-body { border-top: 2px solid var(--gold); }
+  .auth-col.fake    .auth-col-body { border-top: 2px solid var(--red); }
+  .auth-list { list-style: none; padding: 0; }
+  .auth-list li {
+    font-size: 14px;
+    color: var(--text);
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--beige-dark);
+  }
+  .auth-list li:last-child { border-bottom: none; }
+  .auth-col.genuine .auth-list li::before {
+    content: '✓';
+    position: absolute; left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .auth-col.fake .auth-list li::before {
+    content: '✗';
+    position: absolute; left: 0;
+    color: var(--red);
+    font-weight: 700;
+  }
+
+  /* ===== FLOW STEPS ===== */
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .flow-step {
+    background: var(--black);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--white);
+  }
+  .flow-num {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .flow-text strong {
+    font-size: 16px;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .flow-text span { font-size: 14px; color: #bbb; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .target-grid { grid-template-columns: repeat(2, 1fr); }
+    .price-bar-grid { grid-template-columns: repeat(2, 1fr); }
+    .check-grid { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .auth-cols { grid-template-columns: 1fr; }
+    .tab-btn { font-size: 13px; padding: 14px 12px; }
+    .header-title { font-size: 26px; }
+  }
+  @media (max-width: 640px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .target-grid { grid-template-columns: 1fr; }
+    .price-bar-grid { grid-template-columns: 1fr; }
+    .tab-btn { font-size: 12px; padding: 12px 8px; letter-spacing: 0; }
+    .section-title { font-size: 24px; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-brand">LUXURY BRAND GUIDE</div>
+  <div class="header-title">GUCCI アクセサリー</div>
+  <div class="header-sub">メルカリ出品・販売完全ガイド</div>
+</header>
+
+<!-- ===== TAB NAV ===== -->
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab(0)">🎯 ターゲット層</button>
+  <button class="tab-btn" onclick="switchTab(1)">💰 価格帯</button>
+  <button class="tab-btn" onclick="switchTab(2)">⭐ 高値の特徴</button>
+  <button class="tab-btn" onclick="switchTab(3)">🔍 真贋チェック</button>
+</nav>
+
+<main>
+
+<!-- ===================================================
+     TAB 1: ターゲット層
+     =================================================== -->
+<div class="tab-content active" id="tab0">
+
+  <!-- 統計カード -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-number">20〜40代</span>
+      <div class="stat-label">主な購買年齢層</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">女性 65%</span>
+      <div class="stat-label">ジュエリー購買比率（推計）</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">No.1</span>
+      <div class="stat-label">イタリアブランド認知度</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">100年+</span>
+      <div class="stat-label">ブランド歴史</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">ターゲット層別 攻略ガイド</h2>
+  <p class="section-desc">GUCCIアクセサリーを求める6つの主要ターゲットと訴求ポイント</p>
+
+  <div class="target-grid">
+
+    <!-- 1. キャリア女性 -->
+    <div class="target-card">
+      <span class="target-icon">👩‍💼</span>
+      <div class="target-label">Primary Target</div>
+      <div class="target-name">キャリア女性</div>
+      <div class="target-detail">30〜45歳・会社員・管理職<br>年収400〜800万円<br>自己投資・ご褒美消費に積極的</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「美品」「正規品保証」「箱・保存袋付き」を前面に。上品さ・ステータス感を写真で演出。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">ブレスレット</span>
+        <span class="tag">リング</span>
+      </div>
+    </div>
+
+    <!-- 2. トレンド志向の若者 -->
+    <div class="target-card">
+      <span class="target-icon">✨</span>
+      <div class="target-label">Fashion Seeker</div>
+      <div class="target-name">トレンド志向の若者</div>
+      <div class="target-detail">20〜30歳・男女問わず<br>SNS発信・ファッションに敏感<br>ストリート×ラグジュアリーが好き</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「着用感少なめ」「希少モデル」「コーデに映える」など、スタイリングのしやすさを訴求。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">ピアス</span>
+        <span class="tag">キーリング</span>
+      </div>
+    </div>
+
+    <!-- 3. ギフト・記念品層 -->
+    <div class="target-card">
+      <span class="target-icon">🎁</span>
+      <div class="target-label">Gift Buyer</div>
+      <div class="target-name">ギフト・記念品層</div>
+      <div class="target-detail">25〜50歳・男女<br>誕生日・結婚記念・就職祝い<br>プレゼントの「格」を重視</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「プレゼントにも最適」「ブランドBOX完備」「ラッピング可能」など贈り物感を強調。
+      </div>
+      <div class="tag-list">
+        <span class="tag">リング</span>
+        <span class="tag">ネックレス</span>
+        <span class="tag">ブレスレット</span>
+      </div>
+    </div>
+
+    <!-- 4. ブランドコレクター -->
+    <div class="target-card">
+      <span class="target-icon">🏛️</span>
+      <div class="target-label">Collector</div>
+      <div class="target-name">ブランドコレクター</div>
+      <div class="target-detail">35〜60歳・資産家・コレクター<br>廃盤・ヴィンテージへの強い関心<br>価格よりも「希少性」優先</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「廃盤モデル」「ヴィンテージ品」「シリアル付き」「当時の定価〇〇円」などを記載。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ヴィンテージジュエリー</span>
+        <span class="tag">廃盤モデル</span>
+        <span class="tag">限定品</span>
+      </div>
+    </div>
+
+    <!-- 5. 転売・ビジネス目的層 -->
+    <div class="target-card">
+      <span class="target-icon">📦</span>
+      <div class="target-label">Reseller</div>
+      <div class="target-name">転売・ビジネス目的層</div>
+      <div class="target-detail">20〜40歳・副業・フリマ転売<br>価格と状態のコスパを重視<br>まとめ買い・即決を好む</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「まとめ割引あり」「即決価格」「査定済み正規品」など取引速度と確実性をアピール。
+      </div>
+      <div class="tag-list">
+        <span class="tag">即決</span>
+        <span class="tag">まとめ割</span>
+        <span class="tag">正規品証明</span>
+      </div>
+    </div>
+
+    <!-- 6. 初ラグジュアリー層 -->
+    <div class="target-card">
+      <span class="target-icon">🌟</span>
+      <div class="target-label">First Luxury</div>
+      <div class="target-name">初ラグジュアリー層</div>
+      <div class="target-detail">22〜28歳・社会人2〜5年目<br>初めてのブランドジュエリーを検討<br>予算内で本物を求めている</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「GUCCIジュエリーデビューに最適」「正規購入品」「鑑定済み」など、初購入の不安を払拭。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">イヤリング</span>
+        <span class="tag">入門モデル</span>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /tab0 -->
+
+
+<!-- ===================================================
+     TAB 2: 価格帯
+     =================================================== -->
+<div class="tab-content" id="tab1">
+
+  <h2 class="section-title">メルカリ相場 価格帯ガイド</h2>
+  <p class="section-desc">全9カテゴリの価格帯とビジュアル比較</p>
+
+  <div class="warning-box">
+    <span class="w-icon">⚠️</span>
+    <span>価格はあくまで目安です。状態・付属品・出品タイミングにより大きく変動します。</span>
+  </div>
+
+  <!-- 価格テーブル -->
+  <div class="price-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>カテゴリ</th>
+          <th>代表モデル例</th>
+          <th>低（訳あり）</th>
+          <th>中（良品）</th>
+          <th>高（美品・付属品完備）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ネックレス</td>
+          <td>インターロッキングG・チェーン・ハートモチーフ</td>
+          <td class="price-low">4,000円〜</td>
+          <td class="price-mid">8,000〜18,000円</td>
+          <td class="price-high">18,000〜50,000円</td>
+        </tr>
+        <tr>
+          <td>リング（指輪）</td>
+          <td>インターロッキングG・バーミン・スカルモチーフ</td>
+          <td class="price-low">3,000円〜</td>
+          <td class="price-mid">6,000〜14,000円</td>
+          <td class="price-high">14,000〜40,000円</td>
+        </tr>
+        <tr>
+          <td>ブレスレット</td>
+          <td>チェーン・GGモチーフ・インターロッキングG</td>
+          <td class="price-low">3,000円〜</td>
+          <td class="price-mid">7,000〜15,000円</td>
+          <td class="price-high">15,000〜45,000円</td>
+        </tr>
+        <tr>
+          <td>バングル</td>
+          <td>レザー×ゴールド・ダブルG・幅広シルバー</td>
+          <td class="price-low">4,000円〜</td>
+          <td class="price-mid">8,000〜18,000円</td>
+          <td class="price-high">18,000〜50,000円</td>
+        </tr>
+        <tr>
+          <td>ピアス</td>
+          <td>インターロッキングG・スタッド・フープ</td>
+          <td class="price-low">3,000円〜</td>
+          <td class="price-mid">6,000〜13,000円</td>
+          <td class="price-high">13,000〜38,000円</td>
+        </tr>
+        <tr>
+          <td>イヤリング</td>
+          <td>GGモチーフ・フローラル・パール系</td>
+          <td class="price-low">3,000円〜</td>
+          <td class="price-mid">5,000〜11,000円</td>
+          <td class="price-high">11,000〜30,000円</td>
+        </tr>
+        <tr>
+          <td>ブローチ</td>
+          <td>フローラル・タイガー・GGモチーフ</td>
+          <td class="price-low">2,500円〜</td>
+          <td class="price-mid">5,000〜11,000円</td>
+          <td class="price-high">11,000〜30,000円</td>
+        </tr>
+        <tr>
+          <td>ピンブローチ</td>
+          <td>スカル・GGロゴ・動物モチーフ</td>
+          <td class="price-low">1,500円〜</td>
+          <td class="price-mid">3,000〜7,000円</td>
+          <td class="price-high">7,000〜18,000円</td>
+        </tr>
+        <tr>
+          <td>キーリング</td>
+          <td>インターロッキングG・GGモチーフ・ダブルG</td>
+          <td class="price-low">2,000円〜</td>
+          <td class="price-mid">4,000〜9,000円</td>
+          <td class="price-high">9,000〜22,000円</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 色分け凡例 -->
+  <div class="legend-card">
+    <div class="legend-item">
+      <div class="legend-dot low"></div>
+      <span class="legend-text"><strong>低（訳あり品）</strong>：傷・汚れあり、付属品なし</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot mid"></div>
+      <span class="legend-text"><strong>中（良品）</strong>：目立つ傷なし、使用感あり</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot high"></div>
+      <span class="legend-text"><strong>高（美品・付属品完備）</strong>：新品同様、箱・保存袋あり</span>
+    </div>
+  </div>
+
+  <!-- 価格バービジュアル -->
+  <h3 style="font-size:20px;font-weight:700;color:var(--black);margin-bottom:16px;">価格帯ビジュアル比較</h3>
+  <div class="price-bar-grid">
+
+    <div class="price-bar-card">
+      <div class="pbc-name">💎 ネックレス</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:20%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:45%"></div>
+      </div>
+      <div class="pbc-range">低: 4,000円〜 ｜ 中: 8,000〜18,000円 ｜ 高: 〜50,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">💍 リング（指輪）</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:20%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:45%"></div>
+      </div>
+      <div class="pbc-range">低: 3,000円〜 ｜ 中: 6,000〜14,000円 ｜ 高: 〜40,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">📿 ブレスレット</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:20%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:45%"></div>
+      </div>
+      <div class="pbc-range">低: 3,000円〜 ｜ 中: 7,000〜15,000円 ｜ 高: 〜45,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">🔗 バングル</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:20%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:45%"></div>
+      </div>
+      <div class="pbc-range">低: 4,000円〜 ｜ 中: 8,000〜18,000円 ｜ 高: 〜50,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">👂 ピアス</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:22%"></div>
+        <div class="pb-mid"  style="width:33%"></div>
+        <div class="pb-high" style="width:45%"></div>
+      </div>
+      <div class="pbc-range">低: 3,000円〜 ｜ 中: 6,000〜13,000円 ｜ 高: 〜38,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">🌸 イヤリング</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:25%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:40%"></div>
+      </div>
+      <div class="pbc-range">低: 3,000円〜 ｜ 中: 5,000〜11,000円 ｜ 高: 〜30,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">🌺 ブローチ</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:25%"></div>
+        <div class="pb-mid"  style="width:35%"></div>
+        <div class="pb-high" style="width:40%"></div>
+      </div>
+      <div class="pbc-range">低: 2,500円〜 ｜ 中: 5,000〜11,000円 ｜ 高: 〜30,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">📌 ピンブローチ</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:25%"></div>
+        <div class="pb-mid"  style="width:40%"></div>
+        <div class="pb-high" style="width:35%"></div>
+      </div>
+      <div class="pbc-range">低: 1,500円〜 ｜ 中: 3,000〜7,000円 ｜ 高: 〜18,000円</div>
+    </div>
+
+    <div class="price-bar-card">
+      <div class="pbc-name">🔑 キーリング</div>
+      <div class="price-bar">
+        <div class="pb-low"  style="width:25%"></div>
+        <div class="pb-mid"  style="width:40%"></div>
+        <div class="pb-high" style="width:35%"></div>
+      </div>
+      <div class="pbc-range">低: 2,000円〜 ｜ 中: 4,000〜9,000円 ｜ 高: 〜22,000円</div>
+    </div>
+
+  </div>
+</div><!-- /tab1 -->
+
+
+<!-- ===================================================
+     TAB 3: 高値商品の特徴
+     =================================================== -->
+<div class="tab-content" id="tab2">
+
+  <h2 class="section-title">高値商品の特徴と出品テクニック</h2>
+  <p class="section-desc">高く売るために知っておきたい3つのポイント</p>
+
+  <!-- カード1: 定番・人気ライン -->
+  <div class="hv-card">
+    <div class="hv-card-title">定番・人気ラインを知る</div>
+    <div class="hv-card-desc">以下のラインは需要が高く、安定して高値がつきやすい</div>
+
+    <div style="margin-bottom:8px;font-size:15px;font-weight:700;color:var(--gold-dark);">高需要モデル（安定人気）</div>
+    <div class="badge-list">
+      <span class="badge-gold">インターロッキングGネックレス</span>
+      <span class="badge-gold">インターロッキングGリング</span>
+      <span class="badge-gold">GGランニングネックレス</span>
+      <span class="badge-gold">ダブルGブレスレット</span>
+      <span class="badge-gold">GGマーモントピアス</span>
+      <span class="badge-gold">フローラルブローチ</span>
+    </div>
+
+    <div style="margin-top:16px;margin-bottom:8px;font-size:15px;font-weight:700;color:#aaa;">希少性・プレミアムモデル</div>
+    <div class="badge-list">
+      <span class="badge-black">バンブーモチーフキーリング</span>
+      <span class="badge-black">スカルリング（廃盤）</span>
+      <span class="badge-black">ハートロックネックレス</span>
+      <span class="badge-black">GGスタッドピアス</span>
+    </div>
+
+    <div class="hv-point">
+      💡 インターロッキングGシリーズはGUCCIジュエリーの代名詞で需要が最も安定。GGマーモントピアスは女性向けギフト需要が高く美品なら高値がつきやすい。廃盤・限定モデルは希少価値が上がりやすい。
+    </div>
+  </div>
+
+  <!-- カード2: 高値化チェックポイント -->
+  <div class="hv-card">
+    <div class="hv-card-title">高値化のチェックポイント 10選</div>
+    <div class="hv-card-desc">出品前に必ず確認したい10の項目</div>
+
+    <div class="check-grid">
+
+      <div class="check-item">
+        <div class="check-icon">1</div>
+        <div class="check-text">
+          <strong>美品・傷なし・汚れなし</strong>
+          <span>コンディションは最重要。「新品同様」「使用回数1〜2回」は大幅プラス。金属の変色・傷・劣化なし。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">2</div>
+        <div class="check-text">
+          <strong>付属品フルセット</strong>
+          <span>正規ボックス・保存袋・タグ・シリアルカード・保証書が揃うと高値。1点欠けるごとに価値が下がる。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">3</div>
+        <div class="check-text">
+          <strong>シリアルナンバー・型番あり</strong>
+          <span>刻印・シリアルタグが健在であることが正規品証明になる。型番が分かると検索でヒットしやすい。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">4</div>
+        <div class="check-text">
+          <strong>人気カラー（シルバー・ゴールド・ローズゴールド）</strong>
+          <span>シルバー・ゴールドが最も汎用性が高く需要安定。ローズゴールドも女性に人気。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">5</div>
+        <div class="check-text">
+          <strong>インターロッキングGシリーズが最も需要高い</strong>
+          <span>GUCCIジュエリーの中でもインターロッキングGを使ったネックレス・リング・ピアスが最も安定して売れやすく高値になりやすい。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">6</div>
+        <div class="check-text">
+          <strong>廃盤・希少モデル</strong>
+          <span>廃盤になったモデルや限定コラボ品は希少価値が上昇。市場流通量が少ないほど強気の価格設定が可能。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">7</div>
+        <div class="check-text">
+          <strong>ネックレスは「40cm・42cm」が最も売れやすい</strong>
+          <span>鎖骨にかかる定番丈（40〜42cm）の需要が最も高い。極端に長い・短いチェーンより定番レングスが高回転。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">8</div>
+        <div class="check-text">
+          <strong>写真の質が高い</strong>
+          <span>清潔感のある背景・自然光・正面・刻印・金具をしっかり撮影。写真の枚数が多いほど信頼感UP。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">9</div>
+        <div class="check-text">
+          <strong>正規店購入・領収書あり</strong>
+          <span>正規店での購入が証明できると圧倒的に信頼感が上がる。免税店購入の場合も記載するとよい。</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">10</div>
+        <div class="check-text">
+          <strong>専門業者鑑定済み</strong>
+          <span>ブランド鑑定士・ZOZOUSED・ブランド買取店の鑑定書があれば、偽物懸念がなくなり即決率が上がる。</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- カード3: 出品テクニック -->
+  <div class="hv-card">
+    <div class="hv-card-title">高値で売るための出品テクニック</div>
+    <div class="hv-card-desc">実際の売上につながる4つのヒント</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-emoji">📝</span>
+        <div class="tip-title">タイトルに型番・ライン名を入れる</div>
+        <div class="tip-body">「GUCCI インターロッキングG ネックレス シルバー 455315」のように詳細を記載。検索でヒットしやすくなる。</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">💡</span>
+        <div class="tip-title">商品説明に参考定価を記載する</div>
+        <div class="tip-body">「定価〇〇万円」を記載することで、メルカリ価格のお得感を演出できる。</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">📦</span>
+        <div class="tip-title">付属品の一覧化</div>
+        <div class="tip-body">「付属品：ボックス〇、保存袋〇、タグ〇、シリアルカード〇」とチェックリスト形式で記載するとわかりやすい。</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">🕐</span>
+        <div class="tip-title">出品タイミングを意識する</div>
+        <div class="tip-body">夜20〜22時・週末の出品が閲覧数UP。ボーナス時期（6月・12月）や祝日前後は購買意欲が高まる。</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab2 -->
+
+
+<!-- ===================================================
+     TAB 4: 真贋チェック
+     =================================================== -->
+<div class="tab-content" id="tab3">
+
+  <h2 class="section-title">真贋チェックガイド</h2>
+  <p class="section-desc">本物と偽物を見分けるための6つのポイント</p>
+
+  <div class="danger-box">
+    <span class="w-icon">⛔</span>
+    <span>真贋判定は専門の鑑定士への依頼が確実です。以下はあくまで参考情報。<strong>偽物の販売は法律違反です。</strong></span>
+  </div>
+
+  <!-- セクション1 -->
+  <div class="auth-section">
+    <div class="auth-section-title">📋 1. シリアルナンバー・刻印（タグ）</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>タグは革製または高品質なレザーで均一な厚み</li>
+            <li>数字は均等なフォントで深く・くっきり刻印または印字</li>
+            <li>「Made in Italy」の文字が正確・鮮明</li>
+            <li>シリアル番号は通常6〜7桁（モデルにより異なる）</li>
+            <li>タグ上部のステッチが均一で整然としている</li>
+            <li>「GUCCI」ロゴのU字の幅が均等</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>タグが紙製・薄い・柔らかすぎる</li>
+            <li>数字が薄い・滲んでいる・フォントが不揃い</li>
+            <li>「Made in Italy」の文字が小さすぎる・歪んでいる</li>
+            <li>桁数が異常に多い・少ない・不規則</li>
+            <li>ステッチが粗い・不均一・色がズレている</li>
+            <li>フォントの間隔が詰まりすぎ・広すぎ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- セクション2 -->
+  <div class="auth-section">
+    <div class="auth-section-title">🔤 2. ロゴ（GUCCI文字・Gマーク）</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>「GUCCI」の文字は全体的にスラリとした縦長フォント</li>
+            <li>GのフックはCに対してほどよく入り込んでいる</li>
+            <li>文字間の間隔が均等・バランスが整っている</li>
+            <li>ダブルGマーク（GG）は左右対称で重なりが均等</li>
+            <li>金具のロゴは鋭利に彫刻されクッキリしている</li>
+            <li>刻印は深すぎず・浅すぎず均一な深さ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>文字が太すぎる・細すぎる・プロポーションがおかしい</li>
+            <li>GのフックがCに食い込みすぎ・または届いていない</li>
+            <li>文字間隔が不均等・一部が接触している</li>
+            <li>GGマークの左右で大きさが違う・重なり具合が不自然</li>
+            <li>金具の刻印が浅い・滲んでいる・フォントが違う</li>
+            <li>刻印が不均一・一部が潰れている</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- セクション3 -->
+  <div class="auth-section">
+    <div class="auth-section-title">⚙️ 3. 金具（チェーン・留め具・パーツ）</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>ずっしりとした重量感がある（軽すぎない）</li>
+            <li>ゴールド金具は深みのあるマットゴールド or シャイニーゴールド</li>
+            <li>チェーンの各リンクが均一なサイズで繋ぎ目が滑らか</li>
+            <li>金具裏面にも「GUCCI」刻印がある場合が多い</li>
+            <li>鍍金（めっき）が均一で剥がれがない</li>
+            <li>留め具・クラスプの動きがスムーズ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>異様に軽い・プラスチック感がある</li>
+            <li>金色が安っぽい・ギラギラしすぎる・黄色みが強すぎる</li>
+            <li>チェーンリンクの大きさが不揃い・繋ぎ目が荒い</li>
+            <li>金具裏に刻印がない・刻印が曖昧</li>
+            <li>鍍金の薄さが目立つ・端が剥がれ始めている</li>
+            <li>クラスプの動きが引っかかる・ガタつく</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- セクション4 -->
+  <div class="auth-section">
+    <div class="auth-section-title">🏅 4. 素材・品位刻印</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>シルバー素材には「925」（純度92.5%）の刻印がある</li>
+            <li>ゴールド素材には「750」（18K）または「585」（14K）の刻印がある</li>
+            <li>刻印は非常に細かく鮮明で、ルーペで確認できる深さがある</li>
+            <li>金属の質感が重厚・肌なじみが良く変色しにくい</li>
+            <li>レザー使用部分（バングル等）は上質で均一な革の厚み</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>品位刻印（925・750等）がない・読み取れないほど浅い</li>
+            <li>メッキが薄く、着用数回で下地の色が透けてくる</li>
+            <li>金属が異様に軽い・表面がツルツルすぎる・粗い</li>
+            <li>着用後に肌が変色する（緑・黒など）ことがある</li>
+            <li>レザー部分が合成皮革・薄い・端処理が粗い</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- セクション5 -->
+  <div class="auth-section">
+    <div class="auth-section-title">🧵 5. ステッチ（縫い目）</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>縫い目が非常に細かく均一（1cmあたり10針前後）</li>
+            <li>糸の色が素材と調和している（ベージュ・クリーム系が多い）</li>
+            <li>縫い始めと終わりが丁寧に処理されている</li>
+            <li>縫い目がまっすぐで端から均等な距離を保っている</li>
+            <li>レザーパーツ使用アイテムは力がかかる接合部も均一に縫製されている</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>縫い目が粗い・大きい・不均一</li>
+            <li>糸の色が明らかにおかしい（白・黒の粗い糸など）</li>
+            <li>縫い始め・終わりに糸の飛び出しや処理不良がある</li>
+            <li>縫い目が曲がっている・端との距離が不均一</li>
+            <li>ほつれやすい素材の糸を使用している</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- セクション6 -->
+  <div class="auth-section">
+    <div class="auth-section-title">📦 6. 付属品（箱・保存袋・シリアルカード）</div>
+    <div class="auth-cols">
+      <div class="auth-col genuine">
+        <div class="auth-col-header">✓ 本物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>ボックスは厚みのある硬質な紙・蓋に「GUCCI」刻印入りリボン</li>
+            <li>保存袋はGGロゴ入りの厚手ダスティバッグ（ベージュ〜茶系）</li>
+            <li>タグの紙質が高品質・ロゴフォントが正確</li>
+            <li>シリアルカードは本体内タグと番号が一致する</li>
+            <li>保証書・購入レシートがあれば日付・購入店も確認できる</li>
+            <li>箱内のクッション紙がGGロゴプリント入り</li>
+          </ul>
+        </div>
+      </div>
+      <div class="auth-col fake">
+        <div class="auth-col-header">✗ 偽物の特徴</div>
+        <div class="auth-col-body">
+          <ul class="auth-list">
+            <li>ボックスが薄い・軽い・ロゴフォントがおかしい</li>
+            <li>保存袋の生地が薄い・ロゴ印字が滲んでいる・色が違う</li>
+            <li>タグの紙質が安い・文字に印刷ズレ・フォント不一致</li>
+            <li>シリアルカードの番号が本体タグと一致しない</li>
+            <li>箱・袋だけ本物で中身は偽物というケースも存在する</li>
+            <li>クッション紙にロゴがない・印刷が荒い</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 真贋確認フロー -->
+  <h3 style="font-size:22px;font-weight:700;color:var(--black);margin-bottom:14px;margin-top:8px;">真贋確認フロー（5ステップ）</h3>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-text">
+        <strong>シリアルタグを確認</strong>
+        <span>型番・番号・フォントをチェック</span>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-text">
+        <strong>ロゴ・刻印を確認</strong>
+        <span>フォント・バランス・刻印の深さ</span>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-text">
+        <strong>金具・チェーンを確認</strong>
+        <span>重さ・光沢・リンクの均一性</span>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <div class="flow-text">
+        <strong>素材・品位刻印を確認</strong>
+        <span>925/750刻印の有無・金属の重さと質感</span>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">5</div>
+      <div class="flow-text">
+        <strong>付属品を確認</strong>
+        <span>箱・袋・シリアルカードの整合性</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab3 -->
+
+</main>
+
+<script>
+function switchTab(index) {
+  const btns = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+  btns.forEach((btn, i) => { btn.classList.toggle('active', i === index); });
+  contents.forEach((content, i) => { content.classList.toggle('active', i === index); });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
