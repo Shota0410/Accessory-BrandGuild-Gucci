@@ -615,154 +615,18 @@
 
 <!-- ===== TAB NAV ===== -->
 <nav class="tab-nav">
-  <button class="tab-btn active" onclick="switchTab(0)">🎯 ターゲット層</button>
-  <button class="tab-btn" onclick="switchTab(1)">💰 価格帯</button>
-  <button class="tab-btn" onclick="switchTab(2)">⭐ 高値の特徴</button>
-  <button class="tab-btn" onclick="switchTab(3)">🔍 真贋チェック</button>
+  <button class="tab-btn active" onclick="switchTab(0)">💰 価格帯</button>
+  <button class="tab-btn" onclick="switchTab(1)">⭐ 高値の特徴</button>
+  <button class="tab-btn" onclick="switchTab(2)">🔍 真贋チェック</button>
+  <button class="tab-btn" onclick="switchTab(3)">🎯 ターゲット層</button>
 </nav>
 
 <main>
 
 <!-- ===================================================
-     TAB 1: ターゲット層
+     TAB 1: 価格帯
      =================================================== -->
 <div class="tab-content active" id="tab0">
-
-  <!-- 統計カード -->
-  <div class="stats-grid">
-    <div class="stat-card">
-      <span class="stat-number">20〜40代</span>
-      <div class="stat-label">主な購買年齢層</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">女性 65%</span>
-      <div class="stat-label">ジュエリー購買比率（推計）</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">No.1</span>
-      <div class="stat-label">イタリアブランド認知度</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">100年+</span>
-      <div class="stat-label">ブランド歴史</div>
-    </div>
-  </div>
-
-  <h2 class="section-title">ターゲット層別 攻略ガイド</h2>
-  <p class="section-desc">GUCCIアクセサリーを求める6つの主要ターゲットと訴求ポイント</p>
-
-  <div class="target-grid">
-
-    <!-- 1. キャリア女性 -->
-    <div class="target-card">
-      <span class="target-icon">👩‍💼</span>
-      <div class="target-label">Primary Target</div>
-      <div class="target-name">キャリア女性</div>
-      <div class="target-detail">30〜45歳・会社員・管理職<br>年収400〜800万円<br>自己投資・ご褒美消費に積極的</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「美品」「正規品保証」「箱・保存袋付き」を前面に。上品さ・ステータス感を写真で演出。
-      </div>
-      <div class="tag-list">
-        <span class="tag">ネックレス</span>
-        <span class="tag">ブレスレット</span>
-        <span class="tag">リング</span>
-      </div>
-    </div>
-
-    <!-- 2. トレンド志向の若者 -->
-    <div class="target-card">
-      <span class="target-icon">✨</span>
-      <div class="target-label">Fashion Seeker</div>
-      <div class="target-name">トレンド志向の若者</div>
-      <div class="target-detail">20〜30歳・男女問わず<br>SNS発信・ファッションに敏感<br>ストリート×ラグジュアリーが好き</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「着用感少なめ」「希少モデル」「コーデに映える」など、スタイリングのしやすさを訴求。
-      </div>
-      <div class="tag-list">
-        <span class="tag">ネックレス</span>
-        <span class="tag">ピアス</span>
-        <span class="tag">キーリング</span>
-      </div>
-    </div>
-
-    <!-- 3. ギフト・記念品層 -->
-    <div class="target-card">
-      <span class="target-icon">🎁</span>
-      <div class="target-label">Gift Buyer</div>
-      <div class="target-name">ギフト・記念品層</div>
-      <div class="target-detail">25〜50歳・男女<br>誕生日・結婚記念・就職祝い<br>プレゼントの「格」を重視</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「プレゼントにも最適」「ブランドBOX完備」「ラッピング可能」など贈り物感を強調。
-      </div>
-      <div class="tag-list">
-        <span class="tag">リング</span>
-        <span class="tag">ネックレス</span>
-        <span class="tag">ブレスレット</span>
-      </div>
-    </div>
-
-    <!-- 4. ブランドコレクター -->
-    <div class="target-card">
-      <span class="target-icon">🏛️</span>
-      <div class="target-label">Collector</div>
-      <div class="target-name">ブランドコレクター</div>
-      <div class="target-detail">35〜60歳・資産家・コレクター<br>廃盤・ヴィンテージへの強い関心<br>価格よりも「希少性」優先</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「廃盤モデル」「ヴィンテージ品」「シリアル付き」「当時の定価〇〇円」などを記載。
-      </div>
-      <div class="tag-list">
-        <span class="tag">ヴィンテージジュエリー</span>
-        <span class="tag">廃盤モデル</span>
-        <span class="tag">限定品</span>
-      </div>
-    </div>
-
-    <!-- 5. 転売・ビジネス目的層 -->
-    <div class="target-card">
-      <span class="target-icon">📦</span>
-      <div class="target-label">Reseller</div>
-      <div class="target-name">転売・ビジネス目的層</div>
-      <div class="target-detail">20〜40歳・副業・フリマ転売<br>価格と状態のコスパを重視<br>まとめ買い・即決を好む</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「まとめ割引あり」「即決価格」「査定済み正規品」など取引速度と確実性をアピール。
-      </div>
-      <div class="tag-list">
-        <span class="tag">即決</span>
-        <span class="tag">まとめ割</span>
-        <span class="tag">正規品証明</span>
-      </div>
-    </div>
-
-    <!-- 6. 初ラグジュアリー層 -->
-    <div class="target-card">
-      <span class="target-icon">🌟</span>
-      <div class="target-label">First Luxury</div>
-      <div class="target-name">初ラグジュアリー層</div>
-      <div class="target-detail">22〜28歳・社会人2〜5年目<br>初めてのブランドジュエリーを検討<br>予算内で本物を求めている</div>
-      <div class="appeal-box">
-        <strong>訴求軸</strong>
-        「GUCCIジュエリーデビューに最適」「正規購入品」「鑑定済み」など、初購入の不安を払拭。
-      </div>
-      <div class="tag-list">
-        <span class="tag">ネックレス</span>
-        <span class="tag">イヤリング</span>
-        <span class="tag">入門モデル</span>
-      </div>
-    </div>
-
-  </div>
-</div><!-- /tab0 -->
-
-
-<!-- ===================================================
-     TAB 2: 価格帯
-     =================================================== -->
-<div class="tab-content" id="tab1">
 
   <h2 class="section-title">メルカリ相場 価格帯ガイド</h2>
   <p class="section-desc">全9カテゴリの価格帯とビジュアル比較</p>
@@ -963,13 +827,13 @@
     </div>
 
   </div>
-</div><!-- /tab1 -->
+</div><!-- /tab0 -->
 
 
 <!-- ===================================================
-     TAB 3: 高値商品の特徴
+     TAB 2: 高値商品の特徴
      =================================================== -->
-<div class="tab-content" id="tab2">
+<div class="tab-content" id="tab1">
 
   <h2 class="section-title">高値商品の特徴と出品テクニック</h2>
   <p class="section-desc">高く売るために知っておきたい3つのポイント</p>
@@ -1120,13 +984,13 @@
     </div>
   </div>
 
-</div><!-- /tab2 -->
+</div><!-- /tab1 -->
 
 
 <!-- ===================================================
-     TAB 4: 真贋チェック
+     TAB 3: 真贋チェック
      =================================================== -->
-<div class="tab-content" id="tab3">
+<div class="tab-content" id="tab2">
 
   <h2 class="section-title">真贋チェックガイド</h2>
   <p class="section-desc">本物と偽物を見分けるための6つのポイント</p>
@@ -1370,6 +1234,142 @@
     </div>
   </div>
 
+</div><!-- /tab2 -->
+
+
+<!-- ===================================================
+     TAB 4: ターゲット層
+     =================================================== -->
+<div class="tab-content" id="tab3">
+
+  <!-- 統計カード -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-number">20〜40代</span>
+      <div class="stat-label">主な購買年齢層</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">女性 65%</span>
+      <div class="stat-label">ジュエリー購買比率（推計）</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">No.1</span>
+      <div class="stat-label">イタリアブランド認知度</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">100年+</span>
+      <div class="stat-label">ブランド歴史</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">ターゲット層別 攻略ガイド</h2>
+  <p class="section-desc">GUCCIアクセサリーを求める6つの主要ターゲットと訴求ポイント</p>
+
+  <div class="target-grid">
+
+    <!-- 1. キャリア女性 -->
+    <div class="target-card">
+      <span class="target-icon">👩‍💼</span>
+      <div class="target-label">Primary Target</div>
+      <div class="target-name">キャリア女性</div>
+      <div class="target-detail">30〜45歳・会社員・管理職<br>年収400〜800万円<br>自己投資・ご褒美消費に積極的</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「美品」「正規品保証」「箱・保存袋付き」を前面に。上品さ・ステータス感を写真で演出。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">ブレスレット</span>
+        <span class="tag">リング</span>
+      </div>
+    </div>
+
+    <!-- 2. トレンド志向の若者 -->
+    <div class="target-card">
+      <span class="target-icon">✨</span>
+      <div class="target-label">Fashion Seeker</div>
+      <div class="target-name">トレンド志向の若者</div>
+      <div class="target-detail">20〜30歳・男女問わず<br>SNS発信・ファッションに敏感<br>ストリート×ラグジュアリーが好き</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「着用感少なめ」「希少モデル」「コーデに映える」など、スタイリングのしやすさを訴求。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">ピアス</span>
+        <span class="tag">キーリング</span>
+      </div>
+    </div>
+
+    <!-- 3. ギフト・記念品層 -->
+    <div class="target-card">
+      <span class="target-icon">🎁</span>
+      <div class="target-label">Gift Buyer</div>
+      <div class="target-name">ギフト・記念品層</div>
+      <div class="target-detail">25〜50歳・男女<br>誕生日・結婚記念・就職祝い<br>プレゼントの「格」を重視</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「プレゼントにも最適」「ブランドBOX完備」「ラッピング可能」など贈り物感を強調。
+      </div>
+      <div class="tag-list">
+        <span class="tag">リング</span>
+        <span class="tag">ネックレス</span>
+        <span class="tag">ブレスレット</span>
+      </div>
+    </div>
+
+    <!-- 4. ブランドコレクター -->
+    <div class="target-card">
+      <span class="target-icon">🏛️</span>
+      <div class="target-label">Collector</div>
+      <div class="target-name">ブランドコレクター</div>
+      <div class="target-detail">35〜60歳・資産家・コレクター<br>廃盤・ヴィンテージへの強い関心<br>価格よりも「希少性」優先</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「廃盤モデル」「ヴィンテージ品」「シリアル付き」「当時の定価〇〇円」などを記載。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ヴィンテージジュエリー</span>
+        <span class="tag">廃盤モデル</span>
+        <span class="tag">限定品</span>
+      </div>
+    </div>
+
+    <!-- 5. 転売・ビジネス目的層 -->
+    <div class="target-card">
+      <span class="target-icon">📦</span>
+      <div class="target-label">Reseller</div>
+      <div class="target-name">転売・ビジネス目的層</div>
+      <div class="target-detail">20〜40歳・副業・フリマ転売<br>価格と状態のコスパを重視<br>まとめ買い・即決を好む</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「まとめ割引あり」「即決価格」「査定済み正規品」など取引速度と確実性をアピール。
+      </div>
+      <div class="tag-list">
+        <span class="tag">即決</span>
+        <span class="tag">まとめ割</span>
+        <span class="tag">正規品証明</span>
+      </div>
+    </div>
+
+    <!-- 6. 初ラグジュアリー層 -->
+    <div class="target-card">
+      <span class="target-icon">🌟</span>
+      <div class="target-label">First Luxury</div>
+      <div class="target-name">初ラグジュアリー層</div>
+      <div class="target-detail">22〜28歳・社会人2〜5年目<br>初めてのブランドジュエリーを検討<br>予算内で本物を求めている</div>
+      <div class="appeal-box">
+        <strong>訴求軸</strong>
+        「GUCCIジュエリーデビューに最適」「正規購入品」「鑑定済み」など、初購入の不安を払拭。
+      </div>
+      <div class="tag-list">
+        <span class="tag">ネックレス</span>
+        <span class="tag">イヤリング</span>
+        <span class="tag">入門モデル</span>
+      </div>
+    </div>
+
+  </div>
 </div><!-- /tab3 -->
 
 </main>
