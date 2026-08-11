@@ -583,11 +583,84 @@
   }
   .flow-text span { font-size: 14px; color: #bbb; }
 
+  /* ===== PRODUCT QUICK REF ===== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+  }
+  .product-img-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--beige);
+  }
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 12px 14px;
+  }
+  .product-genre {
+    display: inline-block;
+    background: var(--black);
+    color: var(--gold-light);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .product-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .product-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* ===== GENRE SECTION ===== */
+  .genre-section { margin-bottom: 36px; }
+  .genre-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--black);
+    color: var(--gold);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .target-grid { grid-template-columns: repeat(2, 1fr); }
     .price-bar-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
     .check-grid { grid-template-columns: 1fr; }
     .tips-grid { grid-template-columns: 1fr; }
     .auth-cols { grid-template-columns: 1fr; }
@@ -598,6 +671,7 @@
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .target-grid { grid-template-columns: 1fr; }
     .price-bar-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
     .tab-btn { font-size: 12px; padding: 12px 8px; letter-spacing: 0; }
     .section-title { font-size: 24px; }
     body { font-size: 16px; }
@@ -615,18 +689,373 @@
 
 <!-- ===== TAB NAV ===== -->
 <nav class="tab-nav">
-  <button class="tab-btn active" onclick="switchTab(0)">💰 価格帯</button>
-  <button class="tab-btn" onclick="switchTab(1)">⭐ 高値の特徴</button>
-  <button class="tab-btn" onclick="switchTab(2)">🔍 真贋チェック</button>
-  <button class="tab-btn" onclick="switchTab(3)">🎯 ターゲット層</button>
+  <button class="tab-btn active" onclick="switchTab(0)">📋 相場早見表</button>
+  <button class="tab-btn" onclick="switchTab(1)">💰 価格帯</button>
+  <button class="tab-btn" onclick="switchTab(2)">⭐ 高値の特徴</button>
+  <button class="tab-btn" onclick="switchTab(3)">🔍 真贋チェック</button>
+  <button class="tab-btn" onclick="switchTab(4)">🎯 ターゲット層</button>
 </nav>
 
 <main>
 
 <!-- ===================================================
-     TAB 1: 価格帯
+     TAB 1: 早見表
      =================================================== -->
 <div class="tab-content active" id="tab0">
+
+  <h2 class="section-title">商品別相場早見表</h2>
+  <p class="section-desc">実際の商品画像と相場を一目で確認</p>
+
+  <!-- ネックレス -->
+  <div class="genre-section">
+    <div class="genre-header">💎 ネックレス</div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/9cdf0480e43f68cf748435bd67a2c0a8.jpg" alt="ノットインフィニティ 社外" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">ノットインフィニティ 社外</div>
+          <div class="product-price">9,000〜1.2万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/831554e1f1970f6c5e880039e96a6afa.jpg" alt="カットアウトG クロス" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">カットアウトG クロス</div>
+          <div class="product-price">1〜1.3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/7503aada5d0c2d151ea3680be26f6c3c.jpg" alt="インターロッキング 社外" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">インターロッキング 社外</div>
+          <div class="product-price">1〜1.3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/ae8298b9b7d7b08fd7ab513dabc69e28.jpg" alt="ゴースト スカル関連 社外" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">ゴースト スカル関連 社外</div>
+          <div class="product-price">1.2〜1.6万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/de54e70bebb2e012790a6e270a0dc3c9.jpg" alt="アラベスク インターロッキング 社外" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">アラベスク インターロッキング 社外</div>
+          <div class="product-price">1.4〜1.7万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/6508760ba5f43bc7327b9cd9b998c3d6.jpg" alt="カットアウトG バー" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">カットアウトG バー</div>
+          <div class="product-price">1.5〜1.8万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/44cfa239de9e4306708886d31a0e4759.jpg" alt="キー アラベスク 社外" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">キー アラベスク 社外</div>
+          <div class="product-price">1.8〜2.2万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/2da056e73ad26cb4a8b559a04c3f9b0d.jpg" alt="マザーオブパール ネックレス" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">マザーオブパール</div>
+          <div class="product-price">2〜3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/c07e4e5a16e9fc3430d7990d69253731.png" alt="あずきチェーン" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">あずきチェーン</div>
+          <div class="product-price">1.1〜1.4万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/9cd25d569929b3e9f5084da88379a360.png" alt="あずきチェーン 太め" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">あずきチェーン 太め</div>
+          <div class="product-price">1.4〜1.7万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/11feb1c104488deeb46fe80013fa37fd.png" alt="ボールチェーン" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">ボールチェーン</div>
+          <div class="product-price">1.3〜1.7万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/c27f15556064e761c4ed5b9592491ba3.png" alt="リンクチェーン" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">リンクチェーン</div>
+          <div class="product-price">1.4〜1.7万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/7e50771ab3e1a7001c760acdb6b0db73.png" alt="喜平チェーン" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">喜平チェーン</div>
+          <div class="product-price">1.5〜2万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/9079acc4d1f8e8dc6bce718f39261b7d.png" alt="レクタングルチェーン" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ネックレス</span>
+          <div class="product-name">レクタングルチェーン</div>
+          <div class="product-price">1.7〜2万円</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ブレスレット -->
+  <div class="genre-section">
+    <div class="genre-header">📿 ブレスレット</div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/aba203a9bd26a901019be53c02fb88c9.jpg" alt="トグル ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">トグル</div>
+          <div class="product-price">1.1〜1.3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/eb174a1810296f7138ac60e78b091515.jpg" alt="インターロッキング② ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">インターロッキング②</div>
+          <div class="product-price">1.5万円前後</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/cb8407d8367fd53a083952129b3edd15.jpg" alt="カットアウトG 喜平 約4mm幅 ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">カットアウトG 喜平（約4mm幅）</div>
+          <div class="product-price">1.5万円前後</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/7cda9499d361fadf9a63e1a65585c044.jpg" alt="カットアウトG 喜平 約8mm幅 ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">カットアウトG 喜平（約8mm幅）</div>
+          <div class="product-price">3万円前後</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/8fc35bf99fa7f1fe414e14bf9fcc33da.jpg" alt="インターロッキング ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">インターロッキング</div>
+          <div class="product-price">2〜3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/83502a9f00e5735d9b65f0fdaabf5517.jpg" alt="プレート 喜平 ブレスレット" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">ブレスレット</span>
+          <div class="product-name">プレート 喜平</div>
+          <div class="product-price">2〜3万円</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- リング -->
+  <div class="genre-section">
+    <div class="genre-header">💍 リング <span style="font-size:13px;font-weight:400;color:var(--gold-light);">※号数サイズにより相場変動あり</span></div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/61092404b1107ae8e3771aac2f01286b.jpg" alt="ブランデッドG リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">ブランデッドG</div>
+          <div class="product-price">4,000〜6,000円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/e95a26a4db5d1cc8dece0c007c935953.jpg" alt="インターロッキング リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">インターロッキング</div>
+          <div class="product-price">5,000〜7,000円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/708a05b67267f36f5dec7a296691beda.jpg" alt="プレートロゴ リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">プレートロゴ</div>
+          <div class="product-price">8,000〜1万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/61dee5654f44eb74e14615aa2b2b29aa.jpg" alt="セラミック アイコンリング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">セラミック アイコンリング</div>
+          <div class="product-price">1〜1.5万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/01ca4f2a7625ab13848e523f852af662.jpg" alt="インターロッキング フラワー リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">インターロッキング フラワー</div>
+          <div class="product-price">1.7〜2万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/3861149ba3f47a2c5916a7989aaed6b6.jpg" alt="キャットヘッド リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">キャットヘッド</div>
+          <div class="product-price">1.7〜2.2万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/f0537d7998502135c1b642f4037a67dc.jpg" alt="ダブルG マーモント リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">ダブルG マーモント</div>
+          <div class="product-price">1.7〜2.3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/cde9e42a77de132b88af4112373cc919.jpg" alt="ターコイズ インターロッキング リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">ターコイズ インターロッキング</div>
+          <div class="product-price">2〜2.3万円</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://i.gyazo.com/1f7c4f3dd198dcc42e643f39743b089f.jpg" alt="ターコイズ マザーオブパール ダブルG リング" class="product-img">
+        </div>
+        <div class="product-info">
+          <span class="product-genre">リング</span>
+          <div class="product-name">ターコイズ マザーオブパール ダブルG</div>
+          <div class="product-price">2.3〜3万円</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /tab0 -->
+
+
+<!-- ===================================================
+     TAB 2: 価格帯
+     =================================================== -->
+<div class="tab-content" id="tab1">
 
   <h2 class="section-title">メルカリ相場 価格帯ガイド</h2>
   <p class="section-desc">全9カテゴリの価格帯とビジュアル比較</p>
@@ -827,11 +1256,11 @@
     </div>
 
   </div>
-</div><!-- /tab0 -->
+</div><!-- /tab1 -->
 
 
 <!-- ===================================================
-     TAB 2: 高値商品の特徴
+     TAB 3: 高値商品の特徴
      =================================================== -->
 <div class="tab-content" id="tab1">
 
@@ -1382,6 +1811,24 @@ function switchTab(index) {
   contents.forEach((content, i) => { content.classList.toggle('active', i === index); });
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+const IMG_FORMATS = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+function onImgError(img) {
+  const match = img.src.match(/\.([a-z]+)(\?.*)?$/i);
+  if (!match) return;
+  const ext = match[1].toLowerCase();
+  const idx = IMG_FORMATS.indexOf(ext);
+  if (idx < IMG_FORMATS.length - 1) {
+    img.src = img.src.replace(/\.[a-z]+(\?.*)?$/i, '.' + IMG_FORMATS[idx + 1] + (match[2] || ''));
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.product-img').forEach(function (img) {
+    img.addEventListener('error', function () { onImgError(this); });
+  });
+});
 </script>
 
 </body>
